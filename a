@@ -1,0 +1,26 @@
+#include <LiquidCrystal.h>
+LiquidCrystal lcd(3,5,10,11,12,13);
+int sensor = A2;
+int button1 = 8;
+int button2 = 9;
+String root[] = {"International University"};
+String root1[] = {" ","BA","BME","EE"};
+String root2[] = {" ","Faculty","Student","Teacher"};
+int control = 0;
+int menumode = 0;
+
+void setup() {
+  // put your setup code here, to run once:
+lcd.begin(16, 2);
+  pinMode(button1, INPUT_PULLUP);
+  pinMode(button2, INPUT_PULLUP);
+}
+
+void loop() {
+   lcd.setCursor(0, 0);
+   int val = analogRead(sensor);
+   lcd.print(root[1]);
+ // if(digitalRead(button1) == LOW){
+ //   }
+  
+}
